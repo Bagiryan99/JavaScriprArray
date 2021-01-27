@@ -1,9 +1,79 @@
 <html>
     <head>
-
+        <title> Input</title>
+		<meta charest="utf8">
     </head>
     <body>
         <script src="scripts/array.js"></script>
-    </body>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div>
+                <p>Անուն</p>
+                <input placeholder="Անուն" tabindex="1" name="username" type="text">
+            </div>
+            <div>
+                <p>Ազգանուն</p>
+                <input  placeholder="Ազգանուն"  tabindex= "2" name="lastname" type="text">
+            </div>
+            <div>
+                <p>Գաղտնաբառ</p>
+                <input  placeholder="Գաղտնաբառ"  tabindex="3" name="userpass"type="password">
+            </div>
+            <div>
+                <p>Հեռախոսահամար</p>
+                <input   placeholder="Հեռախոսահամար" tabindex="4" name="userphone"type="tel">
+            </div>
+            <div>
+                <p>Էլ. հասցե</p>
+                <input  placeholder=" էլ.հասցե" tabindex="5" name="useremail"type="email">
+            </div>
+            <div>
+                <p>Նշեք ձեռ սեռը</p>
+                <input   tabindex="6"checked type="radio" name="gender" value="male">Արական 
+            </div>
+            <div>
+                <input tabindex="6" type="radio" name="gender" value="female">Իգական
+            </div>
+            <div>
+                <p>Խնդրում եմ նշեք ձեր նախասիրությունները</p>
+                <input   tabindex="8"checked type="checkbox" name="Sport" value="yes">Սպորտ
+            </div>
+            <div>
+                <input tabindex="8" type="checkbox" name ="Dance" value="yes">Պար
+            </div>
+            <div>
+                <input tabindex="8" disabled type="checkbox" name="Rap" value="yes">Երգ 
+            </div>
+            <div>
+                <p>Հավելյալ տեղեկություններ ձեր մասին</p>
+                <textarea  tabindex="9" name="text"></textarea>
+            </div>
+            <div>
+                <p>Ավելացնել նկար/ֆայլ</p>
+                <input tabindex="10"type="file">
+            </div>
+            <div>
+                <p>Նշեք ձեր սիրելի գույնը</p>
+                <select tabindex="11" name="color">
+                    <option value="red">Կարմիր</option>
+                    <option value="green">Կանաչ</option>
+                    <option selected value="yellow">Դեղին</option>
+                </select>
+            </div>
+            <div>  
+                <p>Number of tentacles (0-1000):</p>
+                <input type="number" id="tentacles" name="tentacles" min="0" max="1000">
 
+            </div>
+            <div>
+               <p>Choose a time for your meeting:</p>
+               <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+            </div>
+            <div>
+                <p>Ուղղարկել/Ջնջել</p>
+                <button tabindex="12" type="submit">Ուղղարկել</button>
+                <button tabindex="13" type="reset">Ջնջել</button>
+                
+            </div>
+        </form>
+    </body>
 </html>
