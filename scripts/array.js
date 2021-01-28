@@ -94,5 +94,14 @@ var deleted=users.splice(1,3);
 
 var users=["Liana", "Sona", "Lia",1,4,99];
 var deleted=users.splice(1,3 , 'Dayana', "Kristina");
-console.log(users, 'original');// 
-console.log(deleted, 'modyfied');//
+//console.log(users, 'original');// 
+//console.log(deleted, 'modyfied');//
+
+var x = ["Mane", "Harut", "Luiza"];
+var i = 0;
+
+while( i < x.length){
+    console.log(x[i]);
+    i = i + 1;
+}
+

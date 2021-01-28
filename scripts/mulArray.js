@@ -90,7 +90,7 @@ var fruit = [ "apple", "lime", "orange", "banana"];
 fruit.reverse();
 
 for (var i = 0; i < fruit.length; i++){
-    //console.log(fruit[i]); 
+   // console.log(fruit[i]); 
 }
 
 //sort() method
@@ -99,5 +99,5 @@ var fruit = [ "apple", "lime", "orange", "banana", "limon", "pear"];
 fruit.sort();
 
 for (var i = 0; i < fruit.length; i++){
-    console.log(fruit[i]); 
+    //console.log(fruit[i]); 
 }
