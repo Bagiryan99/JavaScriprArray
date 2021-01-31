@@ -93,8 +93,3 @@ myCar["model"] = "Toyota";
 myCar["year"] = 2018;
 //console.log(myCar);
 
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-ctx.stroke();
