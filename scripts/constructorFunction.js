@@ -34,9 +34,23 @@ tom.displayInfo();
 var bently = new Car("Bently", 2004);
 tom.driveCar(bently);
 
+class Users{
+    constructor(name, age, isWorking){
+        this.name = name;
+        this.age = age;
+        this.isWorking = isWorking;
+        this.sayHello = function() {
+            return "Hello" + " " + this.name;
+            
+        };
+    }
+}
+var user1 = new Users("Anna", 20, true);
+console.log(user1);
+
 //Instanceof operator
 var user = new User("Sofia", 20);
 var isUser = user instanceof User;
 var isCar =  user instanceof  Car;
-console.log(isUser);    // true
-console.log(isCar);     // false
+//console.log(isUser);    // true
+//console.log(isCar);     // false
