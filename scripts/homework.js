@@ -30,3 +30,12 @@ function cloneArray(arr) {
 }
 //console.log(cloneArray([10,20,30,50]));
 
+//Write a function that takes 2 strings as an argument and checks if those strings are anagram or not.
+
+var isAnagram = function(str1, str2) {
+    var sorted1 = str1.split('').sort().join('').toLowerCase();
+    var sorted2 = str2.split('').sort().join('').toLowerCase();
+    return sorted1 == sorted2;
+}
+console.log(isAnagram('hello', 'jello'));
+console.log(isAnagram('hello','loelh'));
