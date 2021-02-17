@@ -124,4 +124,25 @@ function User() {
 }
 
 const a = new User();
-console.log(a.name);
+//console.log(a.name);
+
+function func(a) {
+    alert(this);
+    alert(a);
+  }
+  
+  const obj = {
+    func: func
+  };
+  
+  // 1. obj.func(5); // this = obj
+  
+  // 2. func(5); // this = window/undefined(use strict)
+  
+  // 3. func.apply(obj, [5]); // this = obj
+  //     func.call(obj, 5);      // this = obj
+  
+  // 4. const boundFunc = func.bind(obj);
+  //     boundFunc(5);
+  
+  // 5. new func(5); // this = {}
