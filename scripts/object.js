@@ -92,4 +92,8 @@ myCar.year = 2018;
 myCar["model"] = "Toyota";
 myCar["year"] = 2018;
 //console.log(myCar);
-
+(function (){
+    var a = (b = 3)
+})()
+console.log(typeof a);
+console.log(typeof b);

@@ -1,86 +1,74 @@
 function User(name, age, isWorking) {
-    this.name = name;
-    this.age = age;
-    this.isWorking = isWorking;
-    this.toString = function () {
-      console.log("Hi" + this.name);
-    };
-  }
-  
-  User.prototype = {
-    printAge() {
+  this.name = name;
+  this.age = age;
+  this.isWorking = isWorking;
+  this.sayHi = function () {
+    console.log("Hi" + this.name);
+  };
+ 
+}
+
+
+User.prototype = {
+    printAge (){
       console.log(this.age);
     },
     lastName: "Hello",
-  };
-  
-  let user1 = new User("Heloo", 45, true);
-  let user2 = new User("World", 56, false);
-  //console.log(Object.getPrototypeOf(user1));
-  //console.log(user1.__proto__.__proto__);
-  //console.dir(User);
-  //console.log(Object.__proto__);
-  // console.log(user1);
-  // user1.toString();
-  // user1.printAge();
-  // user2.printAge();
-  
-  //console.log(user1);
-  // console.log(user1.__proto__ === User.prototype);
-  // console.log(user1.__proto__ === User.__proto__);
-  
-  // let user3 = Object.create(user1);
-  // console.log(user3);
-  
-  let obj = {
-    a: 5,
-    b: 8,
-  };
-  
-  Object.defineProperty(obj, "sum", {
-    get: function () {
-      return this.a + this.b;
-    },
-    set: function (num) {
-      num = 100;
-      this.b = num - 1;
-    },
-  });
-  
-  console.log(obj.sum);
-  obj.sum = 9;
-  console.log(obj.b);
-  
-  const user = {
-    get fullName() {
-      return this.firstName + " " + this.lastName;
-    },
-    set fullName(name) {
-      let words = name.toString().split(" ");
-      this.firstName = words[0] || "";
-      this.lastName = words[1] || "";
-    },
-  };
-  user.fullName = "Hello World";
-  //console.log(user.firstName);
-  //console.log(user.lastName);
+};
 
-  function User(pName, pAge) {
-    this.name = pName;
-    this.age = pAge;
-    this.displayInfo = function(){
-        console.log("Name: " + this.name + "; Age: " + this.age);
-    };
-};
+
+
+let  user1 = new User("Hello", 30, true);
+let  user2 = new User("World" , 20, false);
+//console.log(Object.getPrototypeOf(user1));
+//console.log(user1.__proto__.__proto__);
+console.dir(User);
+console.dir(Object.__proto__);
+//console.log(User.prototype);
+user1.sayHi();
+user1.printAge();
+user2.printAge();
+//console.log(user1);
+
+// console.log(user1.__proto__ === User.prototype);
+// console.log(user1.__proto__ ===User.__proto__);
+
+let user3 = Object.create(user1);
+//console.log(user3);
+
+let obj = {
+   a: 5,
+   b: 8
+}
+ Object.defineProperty(obj, 'sum', {
+   get: function () {
+   return this.a + this.b;
+ },
+   set: function(num){
+  num = 20;
+  this.b = num;
+   },
+})
+ //console.log(obj.sum);
+ //console.log(obj.b);
+
+ let age = 18;
+ console.log(age.prototype === Number.prototype);// false
+ console.log(age.__proto__ === Number.prototype);// true
+
+ console.log( ({}).prototype === ({}.__proto__));//false
+
+
  
-User.prototype.hello = function(){
-    console.log(this.name + " say: 'hello!'");
-};
-User.prototype.maxAge = 110;
- 
-var mari = new User("Mari", 26);
-mari.hello();
-var rafayel = new User("Rafayel", 28);
-rafayel.hello();
-console.log(mari.maxAge); // 110
-console.log(rafayel.maxAge); // 110
+ const person = new Object({
+  name: "Mari",
+  age: 20,
+  greet: function () {
+    console.log("Greet!");
+  }
+})
+ Object.prototype.sayHello = function(){
+   console.log('Hello');
+ }
+ const a = Object.create(person);
+ a.name = "Anna";
